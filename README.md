@@ -9,4 +9,5 @@
 
 | 날짜 | 종류 | 주제 |
 |---|---|---|
+| 2026-11-11 | 📄 논문 | [Toward Foundation Detection Models via Example-Based Grounding in EM-DETR](papers/2026-11-11.md) |
 <!-- LOG:END -->
