@@ -11,4 +11,5 @@
 |---|---|---|
 | 2026-11-11 | 📄 논문 | [Direct Preference Optimization: Your Language Model is Secretly a Reward Model](papers/2026-11-11.md) |
 | 2026-11-12 | 🧠 개념 | [DETR와 set prediction: Hungarian matching으로 NMS 없는 검출](concepts/2026-11-12.md) |
+| 2026-11-13 | 📄 논문 | [Masked Autoencoders Are Scalable Vision Learners (MAE)](papers/2026-11-13.md) |
 <!-- LOG:END -->
