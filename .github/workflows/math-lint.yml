@@ -1,0 +1,12 @@
+name: math-lint
+on: [push, pull_request]
+jobs:
+  braces:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # GitHub strips \{ \} before MathJax runs; use \lbrace \rbrace instead (see CLAUDE.md)
+      - run: |
+          if grep -rnF -e '\{' -e '\}' --include='*.md' --exclude=CLAUDE.md .; then
+            echo "::error::Use \\lbrace / \\rbrace instead of \\{ / \\} in math"; exit 1
+          fi
