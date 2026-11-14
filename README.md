@@ -13,4 +13,5 @@
 | 2026-11-12 | 🧠 개념 | [DETR와 set prediction: Hungarian matching으로 NMS 없는 검출](concepts/2026-11-12.md) |
 | 2026-11-13 | 📄 논문 | [Masked Autoencoders Are Scalable Vision Learners (MAE)](papers/2026-11-13.md) |
 | 2026-11-14 | 🧠 개념 | [Deformable attention: Deformable DETR의 reference 주변 K점 샘플링](concepts/2026-11-14.md) |
+| 2026-11-15 | 📄 논문 | [High-Resolution Image Synthesis with Latent Diffusion Models (LDM)](papers/2026-11-15.md) |
 <!-- LOG:END -->
