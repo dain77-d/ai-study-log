@@ -16,4 +16,5 @@
 | 2026-11-15 | 📄 논문 | [High-Resolution Image Synthesis with Latent Diffusion Models (LDM)](papers/2026-11-15.md) |
 | 2026-11-16 | 🧠 개념 | [Mask2Former: masked attention으로 panoptic·instance·semantic을 한 구조로](concepts/2026-11-16.md) |
 | 2026-11-17 | 📄 논문 | [DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](papers/2026-11-17.md) |
+| 2026-11-18 | 🧠 개념 | [SAM과 promptable segmentation: 무거운 인코더 1회 + 가벼운 디코더 N회, 그리고 data engine](concepts/2026-11-18.md) |
 <!-- LOG:END -->
