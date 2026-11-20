@@ -19,4 +19,5 @@
 | 2026-11-18 | 🧠 개념 | [SAM과 promptable segmentation: 무거운 인코더 1회 + 가벼운 디코더 N회, 그리고 data engine](concepts/2026-11-18.md) |
 | 2026-11-19 | 📄 논문 | [Swin Transformer: Hierarchical Vision Transformer using Shifted Windows](papers/2026-11-19.md) |
 | 2026-11-20 | 🧠 개념 | [CLIP: 이미지-텍스트 contrastive 사전학습과 "텍스트로 만드는 분류기"](concepts/2026-11-20.md) |
+| 2026-11-21 | 📄 논문 | [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](papers/2026-11-21.md) |
 <!-- LOG:END -->
