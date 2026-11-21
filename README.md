@@ -20,4 +20,5 @@
 | 2026&#8209;11&#8209;19 | 📄 [Swin Transformer: Hierarchical Vision Transformer using Shifted Windows](papers/2026-11-19.md) |
 | 2026&#8209;11&#8209;20 | 🧠 [CLIP: 이미지-텍스트 contrastive 사전학습과 "텍스트로 만드는 분류기"](concepts/2026-11-20.md) |
 | 2026&#8209;11&#8209;21 | 📄 [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](papers/2026-11-21.md) |
+| 2026&#8209;11&#8209;22 | 🧠 [DINO: 라벨 없는 self-distillation과 self-supervised ViT의 emergent 성질](concepts/2026-11-22.md) |
 <!-- LOG:END -->
