@@ -22,4 +22,5 @@
 | 2026&#8209;11&#8209;21 | 📄 [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](papers/2026-11-21.md) |
 | 2026&#8209;11&#8209;22 | 🧠 [DINO: 라벨 없는 self-distillation과 self-supervised ViT의 emergent 성질](concepts/2026-11-22.md) |
 | 2026&#8209;11&#8209;23 | 📄 [Scalable Diffusion Models with Transformers (DiT)](papers/2026-11-23.md) |
+| 2026&#8209;11&#8209;24 | 🧠 [ViT: 이미지를 16×16 "단어"로 자르고, inductive bias 대신 데이터 규모로 푸는 법](concepts/2026-11-24.md) |
 <!-- LOG:END -->
