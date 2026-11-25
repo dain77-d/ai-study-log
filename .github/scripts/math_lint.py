@@ -12,7 +12,7 @@ Also a bare & inside inline $...$ fails the same way (& is fine in $$...$$ displ
 Inline math must be written as $`...`$ (GitHub passes it to MathJax verbatim, no Markdown parsing).
 Plain $...$ also loses underscores to emphasis (_ pairs across two formulas) and is not rendered inside
 *italic* text such as figure captions. --fix converts $...$ to $`...`$ automatically.
-Write money as \$ (e.g. \$294K) so it is never mistaken for math.
+Write money as \\$ (e.g. \\$294K) so it is never mistaken for math.
 
 Usage: python .github/scripts/math_lint.py [--fix] [files...]   (default: every *.md)
 --fix rewrites the mechanical cases; & in inline math must be fixed by hand (move it out of the math).
