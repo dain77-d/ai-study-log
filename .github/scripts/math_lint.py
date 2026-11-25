@@ -25,6 +25,12 @@ MATH = re.compile(r"\$\$.+?\$\$|\$[^$\n]+\$", re.S)
 CODE = re.compile(r"```.*?```|`[^`\n]*`", re.S)
 
 
+def needs_backticks(span):
+    """Inline $...$ with _ or * can pair with another span's _ / * and turn into Markdown emphasis,
+    eating the underscores (e.g. $\\mathsf{Linear}_D(x)$ ... $\\tau_\\Delta$). $`...`$ is never parsed as Markdown."""
+    return not span.startswith("$$") and ("_" in span or "*" in span)
+
+
 def fix_span(span):
     def sub(m):
         rep = REPLACE.get(m.group(0))
@@ -32,7 +38,8 @@ def fix_span(span):
             return m.group(0)
         nxt = span[m.end():m.end() + 1]
         return rep + (" " if nxt.isalpha() else "")
-    return ESCAPE.sub(sub, span)
+    span = ESCAPE.sub(sub, span)
+    return "$`" + span[1:-1] + "`$" if needs_backticks(span) else span
 
 
 def check(path, fix):
@@ -42,6 +49,12 @@ def check(path, fix):
     for m in MATH.finditer(masked):
         span = text[m.start():m.end()]
         line = text.count("\n", 0, m.start()) + 1
+        if span.startswith("$`"):  # $`...`$ is passed to MathJax verbatim: nothing to check
+            out.append(text[pos:m.end()])
+            pos = m.end()
+            continue
+        if needs_backticks(span):
+            problems.append(f"{path}:{line}: '_' or '*' in inline $...$ -> write it as $`...`$")
         for e in ESCAPE.finditer(span):
             hint = REPLACE.get(e.group(0), "move it out of the math or rewrite")
             problems.append(f"{path}:{line}: '{e.group(0)}' in math -> use '{hint}'")
