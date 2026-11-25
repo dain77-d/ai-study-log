@@ -9,6 +9,10 @@ every backslash followed by ASCII punctuation loses its backslash:
   \\&      -> raw & inside inline math is HTML-escaped and fails ("Unable to render expression")
 Also a bare & inside inline $...$ fails the same way (& is fine in $$...$$ display blocks).
 
+Inline math must be written as $`...`$ (GitHub passes it to MathJax verbatim, no Markdown parsing).
+Plain $...$ also loses underscores to emphasis (_ pairs across two formulas) and is not rendered inside
+*italic* text such as figure captions. --fix converts $...$ to $`...`$ automatically.
+
 Usage: python .github/scripts/math_lint.py [--fix] [files...]   (default: every *.md)
 --fix rewrites the mechanical cases; & in inline math must be fixed by hand (move it out of the math).
 """
@@ -26,9 +30,10 @@ CODE = re.compile(r"```.*?```|`[^`\n]*`", re.S)
 
 
 def needs_backticks(span):
-    """Inline $...$ with _ or * can pair with another span's _ / * and turn into Markdown emphasis,
-    eating the underscores (e.g. $\\mathsf{Linear}_D(x)$ ... $\\tau_\\Delta$). $`...`$ is never parsed as Markdown."""
-    return not span.startswith("$$") and ("_" in span or "*" in span)
+    """Every inline math goes in $`...`$. Plain $...$ breaks in two ways on GitHub: _ or * pairs with
+    another span's _ / * and becomes emphasis (e.g. $\\mathsf{Linear}_D(x)$ ... $\\tau_\\Delta$), and
+    math inside *italic* figure captions is not rendered at all. $`...`$ is never parsed as Markdown."""
+    return not span.startswith("$$")
 
 
 def fix_span(span):
@@ -54,7 +59,7 @@ def check(path, fix):
             pos = m.end()
             continue
         if needs_backticks(span):
-            problems.append(f"{path}:{line}: '_' or '*' in inline $...$ -> write it as $`...`$")
+            problems.append(f"{path}:{line}: inline math must be written as $`...`$ (run with --fix)")
         for e in ESCAPE.finditer(span):
             hint = REPLACE.get(e.group(0), "move it out of the math or rewrite")
             problems.append(f"{path}:{line}: '{e.group(0)}' in math -> use '{hint}'")
