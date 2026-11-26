@@ -25,4 +25,5 @@
 | 2026&#8209;11&#8209;24 | 🧠 [ViT: 이미지를 16×16 "단어"로 자르고, inductive bias 대신 데이터 규모로 푸는 법](concepts/2026-11-24.md) |
 | 2026&#8209;11&#8209;25 | 📄 [Mamba: Linear-Time Sequence Modeling with Selective State Spaces](papers/2026-11-25.md) |
 | 2026&#8209;11&#8209;26 | 🧠 [RoPE: 위치를 "더하지" 않고 q·k를 "회전"시켜 상대 위치만 남기는 법](concepts/2026-11-26.md) |
+| 2026&#8209;11&#8209;27 | 📄 [Efficient Memory Management for LLM Serving with PagedAttention (vLLM)](papers/2026-11-27.md) |
 <!-- LOG:END -->
