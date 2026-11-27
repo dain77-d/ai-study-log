@@ -26,4 +26,5 @@
 | 2026&#8209;11&#8209;25 | 📄 [Mamba: Linear-Time Sequence Modeling with Selective State Spaces](papers/2026-11-25.md) |
 | 2026&#8209;11&#8209;26 | 🧠 [RoPE: 위치를 "더하지" 않고 q·k를 "회전"시켜 상대 위치만 남기는 법](concepts/2026-11-26.md) |
 | 2026&#8209;11&#8209;27 | 📄 [Efficient Memory Management for LLM Serving with PagedAttention (vLLM)](papers/2026-11-27.md) |
+| 2026&#8209;11&#8209;28 | 🧠 [Classifier-Free Guidance: 분류기 없이 "조건부 − 무조건부" 방향으로 밀어 fidelity와 diversity를 맞바꾸는 법](concepts/2026-11-28.md) |
 <!-- LOG:END -->
